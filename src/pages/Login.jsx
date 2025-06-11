@@ -29,7 +29,7 @@ const Login = () => {
   let navigate = useNavigate();
   useEffect(() => {
     axios
-      .post(`${process.env.REACT_APP_API_URL}/getUserByIdToken`, {
+      .post(`${import.meta.env.VITE_API_URL}/getUserByIdToken`, {
         idToken: idToken,
       })
       .then((response) => {
